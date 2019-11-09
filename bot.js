@@ -23,6 +23,9 @@ function onConnectedHandler (addr, port) {
 
 function onMessageHandler (target, context, msg, self) {
   if (doNothing(self)) { return; }
+  const command = parseMessage(msg);
 }
 
 function doNothing(self) { return !!self; }
+
+function parseMessage(msg) { return msg.trim(); }
