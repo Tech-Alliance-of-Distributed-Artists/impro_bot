@@ -14,4 +14,7 @@ const client = new tmi.client(opts);
 
 client.on('connected', onConnectedHandler);
 
-function onConnectedHandler (addr, port) {}
+function onConnectedHandler (addr, port) {
+  console.log(`* Connected to ${addr}:${port}`);
+}
+
