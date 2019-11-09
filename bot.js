@@ -21,4 +21,8 @@ function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
 }
 
-function onMessageHandler (target, context, msg, self) {}
+function onMessageHandler (target, context, msg, self) {
+  if (doNothing(self)) { return; }
+}
+
+function doNothing(self) { return !!self; }
