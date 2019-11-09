@@ -40,6 +40,12 @@ As I'm doing it:
 
   CHANNEL_NAME=<THE_CHANNEL_THE_BOT_WILL_RUN_ON>
   ```
+  
+#### Install the dependencies
+- This projsect uses [npm](https://www.npmjs.com/get-npm) for installing dependencies. 
+  The project won't run without them. 
+  Thankfully, once you have npm installed, you can run a simple command in your terminal to take care of that.
+- `$ npm install`
 
 ### Run Tests
 We'll probs be using jasmine for unit testing - stay tuned
