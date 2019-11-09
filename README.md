@@ -24,6 +24,13 @@ As I'm doing it:
 - __What do you want?__ -
   The Bot needs to know what channel to log onto and do stuff on. You'll need to specify that channel.
   A good beginning is your own twitch account.
+  
+#### Fork and Clone the repo
+- Fork this repo on github
+- In the terminal navigate to where you want the project installed 
+  (Don't know what that means? [Open up an issue](https://github.com/IanDCarroll/impro_bot/issues) and request a better readme)
+- `$ git clone git@github.com:<MY_GITHUB_USERNAME>/impro_bot.git`
+- `$ cd impro_bot`
 
 #### Add your environment variables
 - `$ touch .env`
