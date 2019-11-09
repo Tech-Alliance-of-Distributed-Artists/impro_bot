@@ -11,3 +11,7 @@ const opts = {
 };
 
 const client = new tmi.client(opts);
+
+client.on('connected', onConnectedHandler);
+
+function onConnectedHandler (addr, port) {}
