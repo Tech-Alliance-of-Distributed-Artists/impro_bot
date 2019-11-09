@@ -24,8 +24,18 @@ function onConnectedHandler (addr, port) {
 function onMessageHandler (target, context, msg, self) {
   if (doNothing(self)) { return; }
   const command = parseMessage(msg);
+  routeMessage(command);
 }
 
 function doNothing(self) { return !!self; }
 
 function parseMessage(msg) { return msg.trim(); }
+
+function routeMessage(command) {
+  const commands = ['!d20', 'suggest'];
+  if (command === commands[0]) {
+    console.log(`* That's a ${command} command!`);
+  } else {
+    console.log(`* I don't know what ${command} means!`);
+  }
+}
