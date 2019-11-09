@@ -9,3 +9,5 @@ const opts = {
     process.env.CHANNEL_NAME
   ]
 };
+
+const client = new tmi.client(opts);
