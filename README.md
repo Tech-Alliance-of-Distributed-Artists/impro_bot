@@ -5,7 +5,7 @@ A Chat Bot for Twitch.com/Impro_TV
 - JavaScript
 - Node 8.x
 - Express
-- tmi.js <= Twitch.com's Chat Client Library
+- [tmi.js](https://github.com/tmijs/tmi.js) Javascript library for the Twitch Messaging Interface.
 
 ### Run Locally
 ??? We'll have to try what's in the twitch dev docs and see what happens
