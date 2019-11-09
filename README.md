@@ -9,6 +9,30 @@ A Chat Bot for Twitch.com/Impro_TV
 
 ### Run Locally
 ??? We'll have to try what's in the twitch dev docs and see what happens
+As I'm doing it:
+
+#### Get your twitch account particulars
+- __Who are you?__ -
+  The bot will need a twitch account to run, it can be your human account, or its own
+  - Username -
+    a common pattern is to use your account name + `_bot` like `benstein_bot`
+  - Oauth Token -
+    The token to authenticate your chatbot with Twitch's servers. Generate this with https://twitchapps.com/tmi/
+    (a Twitch community-driven wrapper around the Twitch API), while logged in to your chatbot account.
+    The token will be an alphanumeric string. This is super-secret, so DO NOT COMMIT IT TO GIT!
+    We'll make a `.env` file, added to `.gitignore` to _keep it secret; keep it safe._.
+- __What do you want?__ -
+  The Bot needs to know what channel to log onto and do stuff on. You'll need to specify that channel.
+  A good beginning is your own twitch account.
+
+#### Add your environment variables
+- `$ touch .env`
+- ```
+  BOT_USERNAME=<A_TWITCH_ACCOUNT_USERNAME>
+  OAUTH_TOKEN=<THAT_ACCOUNT'S_SECRET_HASH>
+
+  CHANNEL_NAME=<THE_CHANNEL_THE_BOT_WILL_RUN_ON>
+  ```
 
 ### Run Tests
 We'll probs be using jasmine for unit testing - stay tuned
