@@ -1,0 +1,25 @@
+{
+  "name": "impro-bot",
+  "version": "0.0.1",
+  "description": "A Chat Bot for Twitch.com/Impro_TV",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "tmi.js": "^1.2.1"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://github.com/IanDCarroll/impro_bot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "twitch",
+    "chatbots",
+    "irc"
+  ]
+}
