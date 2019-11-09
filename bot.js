@@ -24,18 +24,33 @@ function onConnectedHandler (addr, port) {
 function onMessageHandler (target, context, msg, self) {
   if (doNothing(self)) { return; }
   const command = parseMessage(msg);
-  routeMessage(command);
+  const response = buildResponse(command);
 }
 
 function doNothing(self) { return !!self; }
 
 function parseMessage(msg) { return msg.trim(); }
 
-function routeMessage(command) {
-  const commands = ['!d20', 'suggest'];
-  if (command === commands[0]) {
-    console.log(`* That's a ${command} command!`);
-  } else {
-    console.log(`* I don't know what ${command} means!`);
+function buildResponse(command) {
+  if (known(command)) {
+    return handleKnown(command);
   }
+  return handleUnknown(command);
+}
+
+function known(command) {
+  const commands = ['suggest'];
+  return command === commands[0];
+}
+
+function handleKnown(command) {
+  console.log(`* That's a ${command} command!`);
+  return `You made a ${command} command! You're a good Charlie-compound Boy! Link: https://improtheatre.com`
+}
+
+const DO_NOT_REPLY = `RESPONSE NOT NECESSARY`;
+
+function handleUnknown(command) {
+  console.log(`* I don't know what ${command} means!`);
+  return DO_NOT_REPLY;
 }
