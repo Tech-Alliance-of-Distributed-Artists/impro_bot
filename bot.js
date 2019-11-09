@@ -25,6 +25,7 @@ function onMessageHandler (target, context, msg, self) {
   if (doNothing(self)) { return; }
   const command = parseMessage(msg);
   const response = buildResponse(command);
+  if (response !== DO_NOT_REPLY) { send(response, target); }
 }
 
 function doNothing(self) { return !!self; }
@@ -36,6 +37,10 @@ function buildResponse(command) {
     return handleKnown(command);
   }
   return handleUnknown(command);
+}
+
+function send(response, target) {
+  client.say(target, response);
 }
 
 function known(command) {
