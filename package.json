@@ -4,7 +4,8 @@
   "description": "A Chat Bot for Twitch.com/Impro_TV",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "test": "jasmine"
   },
   "dependencies": {
     "express": "^4.16.4",
