@@ -49,7 +49,7 @@ As I'm doing it:
 - `$ npm install`
 
 ### Run Tests
-We'll probs be using jasmine for unit testing - stay tuned
+- `$ npm test`
 
 #### =VVV= TWITCH DOCS =VVV=
 https://dev.twitch.tv/docs/irc
