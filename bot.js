@@ -1,3 +1,5 @@
+const log = require('./lib/report/toConsole');
+const onConnected = require('./lib/handle/connection');
 const tmi = require('tmi.js');
 
 const opts = {
@@ -12,14 +14,10 @@ const opts = {
 
 const client = new tmi.client(opts);
 
-client.on('connected', onConnectedHandler);
+client.on('connected', log(onConnected));
 client.on('message', onMessageHandler);
 
 client.connect();
-
-function onConnectedHandler (addr, port) {
-  console.log(`* Connected to ${addr}:${port}`);
-}
 
 function onMessageHandler (target, context, msg, self) {
   if (doNothing(self)) { return; }
