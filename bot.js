@@ -14,7 +14,7 @@ const opts = {
 
 const client = new tmi.client(opts);
 
-client.on('connected', log(onConnected));
+client.on('connected', (addr, port) => { log(onConnected(addr, port)); });
 client.on('message', onMessageHandler);
 
 client.connect();
