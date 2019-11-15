@@ -1,4 +1,4 @@
-const tellMeImConnected = require('./lib/report/toConsole');
+const tellMeImConnected = require('./lib/tmiAdapter/onConnected');
 const onMessageReceived = require('./lib/handle/message');
 const tmi = require('tmi.js');
 
