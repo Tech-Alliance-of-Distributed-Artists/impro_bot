@@ -1,5 +1,5 @@
 const tellMeImConnected = require('./lib/tmiAdapter/onConnected');
-const onMessageReceived = require('./lib/handle/message');
+const sendAGoodResponse = require('./lib/tmiAdapter/onMessage');
 const tmi = require('tmi.js');
 
 const opts = {
@@ -15,13 +15,10 @@ const opts = {
 const client = new tmi.client(opts);
 
 client.on('connected', tellMeImConnected);
-client.on('message', respondToGood);
+client.on('message', respondWithSay);
 
 client.connect();
 
-function respondToGood(target, context, msg, self) {
-  const response = onMessageReceived(target, context, msg, self);
-  if (sendable(response)) { client.say(target, response); }
+function respondWithSay(target, context, msg, self) {
+  sendAGoodResponse(target, context, msg, self, client.say);
 }
-
-function sendable(response) { return !!response; }
