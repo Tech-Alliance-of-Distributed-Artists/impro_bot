@@ -6,7 +6,7 @@ A Chat Bot for Twitch.com/Impro_TV
 - JavaScript
 - Node 8.x
 - Express
-- [tmi.js](https://github.com/tmijs/tmi.js) Javascript library for the Twitch Messaging Interface.
+- [tmi.js](https://github.com/tmijs/tmi.js) Javascript library for the Twitch Messaging Interface. [docs](https://github.com/tmijs/docs/tree/gh-pages/_posts)
 
 ### Run Locally
 ??? We'll have to try what's in the twitch dev docs and see what happens
@@ -18,7 +18,7 @@ As I'm doing it:
   - Username -
     a common pattern is to use your account name + `_bot` like `benstein_bot`
   - Oauth Token -
-    The token to authenticate your chatbot with Twitch's servers. Generate this with https://twitchapps.com/tmi/
+    The token to [authenticate](https://dev.twitch.tv/docs/authentication) your chatbot with Twitch's servers. Generate this with https://twitchapps.com/tmi/
     (a Twitch community-driven wrapper around the Twitch API), while logged in to your chatbot account.
     The token will be an alphanumeric string. This is super-secret, so DO NOT COMMIT IT TO GIT!
     We'll make a `.env` file, added to `.gitignore` to _keep it secret; keep it safe._.
