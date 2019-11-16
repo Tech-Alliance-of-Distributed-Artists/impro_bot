@@ -14,11 +14,15 @@ const opts = {
 
 const client = new tmi.client(opts);
 
-client.on('connected', tellMeImConnected);
+client.on('connected', logToConsole);
 client.on('message', respondWithSay);
 
 client.connect();
 
 function respondWithSay(target, context, msg, self) {
   sendAGoodResponse(target, context, msg, self, client.say);
+}
+
+function logToConsole(addr, port) {
+  tellMeImConnected(addr, port, console.log)
 }
