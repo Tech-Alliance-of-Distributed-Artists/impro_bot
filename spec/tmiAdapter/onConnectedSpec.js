@@ -1,6 +1,6 @@
 const subject = require('../../lib/tmiAdapter/onConnected');
 
-describe("tmiAdapter/onMessage/respondToGood", function() {
+describe("tmiAdapter/onConnected/tellMeImConnected", function() {
   it("passes a message to a logging callback like console.log", function () {
     const addr = "twitch.tv/impro_tv";
     const port = 80;
