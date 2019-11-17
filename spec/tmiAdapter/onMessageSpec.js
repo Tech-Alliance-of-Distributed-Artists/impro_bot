@@ -22,7 +22,7 @@ describe("tmiAdapter/onMessage/respondToGood", function() {
     const spy = new Spy();
     subject(target, context, message, self, spy.recordWhatIsSent);
 
-    expect(spy.actual()).toContain("I have not yet been called");
+    expect(spy.actual()).toEqual("I have not yet been called");
   });
 
   it("does not respond to itself even if the message is valid", function () {
@@ -34,7 +34,7 @@ describe("tmiAdapter/onMessage/respondToGood", function() {
     const spy = new Spy();
     subject(target, context, message, self, spy.recordWhatIsSent);
 
-    expect(spy.actual()).toContain("I have not yet been called");
+    expect(spy.actual()).toEqual("I have not yet been called");
   });
 });
 
