@@ -24,6 +24,18 @@ describe("tmiAdapter/onMessage/respondToGood", function() {
 
     expect(spy.actual()).toContain("I have not yet been called");
   });
+
+  it("does not respond to itself even if the message is valid", function () {
+    const target = "";
+    const context = "";
+    const message = "suggest";
+    const self = true;
+
+    const spy = new Spy();
+    subject(target, context, message, self, spy.recordWhatIsSent);
+
+    expect(spy.actual()).toContain("I have not yet been called");
+  });
 });
 
 function Spy() { Spy.prototype.response = "I have not yet been called"; }
