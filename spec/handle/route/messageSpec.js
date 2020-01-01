@@ -3,7 +3,7 @@ const DO_NOT_REPLY = constants.DO_NOT_REPLY;
 const SUGGESTION = constants.SUGGESTION;
 const subject = require('../../../lib/handle/route/message');
 
-describe("handle/message/buildResponse", function() {
+describe("handle/route/message/routeResponse", function() {
   it("returns a message containing the SUGGEST command when given the SUGGEST command", function () {
     const command = SUGGESTION;
     const actual = subject(command);
