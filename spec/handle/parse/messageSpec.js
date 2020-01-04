@@ -1,4 +1,4 @@
-const constants = require('../../../lib/signal/constants');
+const constants = require('../../../lib/constants/internal');
 const DO_NOT_REPLY = constants.DO_NOT_REPLY;
 const SUGGESTION = constants.SUGGESTION;
 const subject = require('../../../lib/handle/parse/message');
