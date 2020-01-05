@@ -34,6 +34,7 @@ As I'm doing it:
 - `$ cd impro_bot`
 
 #### Add your environment variables
+- This app uses [dotenv](https://www.npmjs.com/package/dotenv) to store environment variables.
 - `$ touch .env`
 - ```
   BOT_USERNAME=<A_TWITCH_ACCOUNT_USERNAME>
@@ -41,6 +42,9 @@ As I'm doing it:
 
   CHANNEL_NAME=<THE_CHANNEL_THE_BOT_WILL_RUN_ON>
   ```
+- Don't wrap values in quotes, type or paste them straight.
+- Find or generate an ouath token here: with https://twitchapps.com/tmi/ 
+- The token line should look like this: `OAUTH_TOKEN=oauth:1awesomerandompassofthislength`
   
 #### Install the dependencies
 - This projsect uses [npm](https://www.npmjs.com/get-npm) for installing dependencies. 
