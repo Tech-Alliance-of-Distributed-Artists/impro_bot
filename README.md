@@ -55,6 +55,11 @@ As I'm doing it:
 ### Run Tests
 - `$ npm test`
 
+### Start the Bot In Prod
+- Twitch has no sandbox. You'll need to test it live.
+- Luckily you can easily create a test twitch account that very few will stumble upon.
+- `$ npm start`
+
 #### =VVV= TWITCH DOCS =VVV=
 https://dev.twitch.tv/docs/irc
 
