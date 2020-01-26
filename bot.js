@@ -13,7 +13,7 @@ client.on('message', respondWithSay);
 client.connect();
 
 function respondWithSay(channel, tags, message, self) {
-  sendAGoodResponse(channel, tags, message, self, client.say);
+  sendAGoodResponse(channel, tags, message, self, client);
 }
 
 function logToConsole(addr, port) {

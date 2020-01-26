@@ -8,7 +8,7 @@ describe("tmiAdapter/onMessage/respondToGood", function() {
     const self = false;
 
     const spy = new Spy();
-    subject(channel, tags, message, self, spy.recordWhatIsSent);
+    subject(channel, tags, message, self, spy);
 
     expect(spy.actual()).toContain(message);
   });
@@ -39,9 +39,18 @@ describe("tmiAdapter/onMessage/respondToGood", function() {
 });
 
 function Spy() { Spy.prototype.response = "I have not yet been called"; }
-Spy.prototype.recordWhatIsSent = function(channel, response) {
-  Spy.prototype.response = response;
-};
+
 Spy.prototype.actual = function() {
   return Spy.prototype.response;
+};
+
+Spy.prototype.say = function(channel, response) {
+  this._recordWhatIsSaid(this._arbitraryDependentFunction(), channel, response);
+};
+
+Spy.prototype._arbitraryDependentFunction = function() { return true; };
+
+Spy.prototype._recordWhatIsSaid = function(dependency, channel, response) {
+  if (dependency) { return Spy.prototype.response = response; }
+  return Spy.prototype.response = "Dependency not resolved";
 };
