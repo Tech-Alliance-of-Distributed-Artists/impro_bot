@@ -14,6 +14,14 @@ describe("constants/environment", function() {
     expect(actual.identity.password).toEqual('oauth:1awesomerandompassofthislength');
     expect(actual.channels[0]).toEqual('Impro_TV');
   });
+
+  it("Returns an Object with set options for tmi and twitch", function () {
+    const actual = subject(mockLoadEnvVars, testEnvVars);
+
+    expect(actual.options.debug).toEqual(true);
+    expect(actual.connection.secure).toEqual(true);
+    expect(actual.connection.reconnect).toEqual(true);
+  });
 });
 
 function mockLoadEnvVars() {
