@@ -12,8 +12,8 @@ client.on('message', respondWithSay);
 
 client.connect();
 
-function respondWithSay(target, context, msg, self) {
-  sendAGoodResponse(target, context, msg, self, client.say);
+function respondWithSay(channel, tags, message, self) {
+  sendAGoodResponse(channel, tags, message, self, client.say);
 }
 
 function logToConsole(addr, port) {
