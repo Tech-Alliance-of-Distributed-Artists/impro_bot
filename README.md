@@ -8,10 +8,6 @@ A Chat Bot for Twitch.com/Impro_TV
 - Express
 - [tmi.js](https://github.com/tmijs/tmi.js) Javascript library for the Twitch Messaging Interface. [docs](https://github.com/tmijs/docs/tree/gh-pages/_posts)
 
-### Run Locally
-??? We'll have to try what's in the twitch dev docs and see what happens
-As I'm doing it:
-
 #### Get your twitch account particulars
 - __Who are you?__ -
   The bot will need a twitch account to run, it can be your human account, or its own
