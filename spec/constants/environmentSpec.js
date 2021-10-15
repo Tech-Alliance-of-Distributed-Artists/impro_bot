@@ -11,7 +11,9 @@ describe("constants/environment", function() {
     const actual = subject(mockLoadEnvVars, testEnvVars);
 
     expect(actual.identity.username).toEqual('Harry Poole');
-    expect(actual.identity.password).toEqual('oauth:1awesomerandompassofthislength');
+    actual.identity.password().then((password) => {
+      expect(password).toEqual('oauth:1awesomerandompassofthislength');
+    });
     expect(actual.channels[0]).toEqual('Impro_TV');
   });
 

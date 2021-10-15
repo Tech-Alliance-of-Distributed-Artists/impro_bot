@@ -5,7 +5,7 @@ const sendAGoodResponse = require('./lib/tmiAdapter/onMessage');
 const tmi = require('tmi.js');
 
 const opts = getEnvVars(dotenv.config, process.env);
-const client = new tmi.client(opts);
+const client = new tmi.Client(opts);
 
 client.on('connected', logToConsole);
 client.on('message', respondWithSay);
