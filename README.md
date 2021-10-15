@@ -1,6 +1,6 @@
 # impro_bot
 A Chat Bot for Twitch.com/Impro_TV
-![Travis Build Status](https://api.travis-ci.com/IanDCarroll/impro_bot.svg?branch=master)
+![Travis Build Status](https://api.travis-ci.com/Tech-Alliance-of-Distributed-Artists/impro_bot.svg?branch=master)
 
 ### Dependencies
 - JavaScript
